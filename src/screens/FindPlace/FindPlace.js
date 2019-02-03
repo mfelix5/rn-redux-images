@@ -1,12 +1,22 @@
 import React from 'react';
 import { View, Text} from 'react-native';
+import { connect } from 'react-redux';
+import PlaceList from '../../components/PlaceList/PlaceList';
 
-export default class FindPlaceScreen extends React.Component {
+class FindPlaceScreen extends React.Component {
     render() {
         return(
             <View>
-                <Text>On Find Place Screen</Text>
+                <PlaceList places={this.props.places} />
             </View>
         );
-    }
-}
+    };
+};
+
+const mapStateToProps = state => {
+    return ({
+        places: state.places.places
+    });
+};
+
+export default connect(mapStateToProps)(FindPlaceScreen)
