@@ -1,0 +1,12 @@
+import React from 'react';
+import { View, Text} from 'react-native';
+
+export default class FindPlaceScreen extends React.Component {
+    render() {
+        return(
+            <View>
+                <Text>On Find Place Screen</Text>
+            </View>
+        );
+    }
+}
